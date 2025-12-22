@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+    // Browser Only understand JS not JSX, so its converting (BABEL)  
+      const container = document.querySelector('.js-container');
+      ReactDOM.createRoot(container).render('Welcome to SuperSimpleDev React Course');
+    </script>
+    <!-- DOCTYPE Tells browser to use latest version of HTML Whatever is Today  -->
+  </body>
+</html>
