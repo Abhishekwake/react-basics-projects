@@ -67,16 +67,16 @@
 
         return (
           <> 
-          <button onClick={sendMessage}> Send message</button>
-          {chatMessages.map((chatMessage) => {
-              return (
-                <ChatMessage
-                  message={chatMessage.message}
-                  sender={chatMessage.sender}
-                  key={chatMessage.id}
-                />
-              );
-            })}
+              <button onClick={sendMessage}> Send message</button>
+              {chatMessages.map((chatMessage) => {
+                  return (
+                    <ChatMessage
+                      message={chatMessage.message}
+                      sender={chatMessage.sender}
+                      key={chatMessage.id}
+                    />
+                  );
+                })}
           </>
         )
       }
