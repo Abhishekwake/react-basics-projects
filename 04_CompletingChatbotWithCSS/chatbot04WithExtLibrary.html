@@ -75,12 +75,19 @@
           </div>
         );
       }
-      function ChatMessages({ chatMessages }) {
+
+      function ChatMessages({ chatMessages }) { 
+       const chatMessagesRef= React.useRef(null);
+        React.useEffect(()=>{
+            const containerEle = chatMessagesRef.current;
+            containerEle.scrollTop= container.scrollHeight;
+            console.log("UPDATED");
+        },[chatMessages])
         // instead of making components Pass direct { Code }
         return (
-          <div className="chat-messages-container">
+          <div className="chat-messages-container " ref={chatMessagesRef}> 
             {chatMessages.map((chatMessage) => {
-              return (
+              return (  
                 <ChatMessage
                   message={chatMessage.message}
                   sender={chatMessage.sender}
