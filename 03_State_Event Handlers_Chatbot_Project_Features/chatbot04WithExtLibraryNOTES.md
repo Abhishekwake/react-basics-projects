@@ -48,3 +48,21 @@ This ensures you're working with the most current state.
 ### **The Bug & Fix Recap:**
 **Problem:** Sequential updates lost the first message because state wasn't updated yet  
 **Solution:** Save the intermediate state in a variable, then use that variable for the next operation
+
+this lesson, we saved the data for our website using arrays and objects. We
+2:41:06
+generated the HTML using map and the key prop. We made the website interactive
+2:41:14
+using on click and onchange. We learned state which is data that changes over
+2:41:21
+time and is connected to the HTML. We used the updater function to update the
+2:41:28
+state and update the HTML at the same time. We learned the array destructuring
+2:41:34
+shortcut. We learned a technique called lifting the state up which lets us share
+2:41:40
+state between components. We made the chat input component interactive and
+2:41:47
+created new chat messages. And we got responses from the chatbot.
+2:41:53
+Here are some exercises to help you practice what we learned in this lesson.
