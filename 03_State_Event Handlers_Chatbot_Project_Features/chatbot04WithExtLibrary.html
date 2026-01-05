@@ -5,6 +5,7 @@
   </head>
   <body>
     <div class="js-container"></div>
+
     <script src="https://unpkg.com/supersimpledev/react.js"></script>
     <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
     <script src="https://unpkg.com/supersimpledev/chatbot.js"></script>
@@ -17,18 +18,30 @@
           setInputText(event.target.value);
           //to save this input we used state in react .state:save data that changes overtimef
         }
-        
         function sendMessage() {
-          setChatMessages([
-            ...chatMessages,
-            {
-              message: inputText,
-              sender: "user",
-              id: crypto.randomUUID(),
-            },
-             setInputText("")
-          ]);
-         
+
+            const newChatMessages = [
+                ...chatMessages,
+                {
+                message: inputText,
+                sender: "user",
+                id: crypto.randomUUID(),
+                },
+            ];
+            
+            setChatMessages(newChatMessages);
+
+            const response= Chatbot.getResponse(inputText);
+            //  console.log(response);
+            setChatMessages([
+                ...newChatMessages,
+                {
+                message: response,
+                sender: "robot",
+                id: crypto.randomUUID(),
+                },
+            ]);
+            setInputText("");
         }
         return (
           <>
