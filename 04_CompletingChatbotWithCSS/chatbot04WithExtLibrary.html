@@ -80,8 +80,11 @@
        const chatMessagesRef= React.useRef(null);
         React.useEffect(()=>{
             const containerEle = chatMessagesRef.current;
+            if(containerEle){
             containerEle.scrollTop= container.scrollHeight;
             console.log("UPDATED");
+            }
+           
         },[chatMessages])
         // instead of making components Pass direct { Code }
         return (
